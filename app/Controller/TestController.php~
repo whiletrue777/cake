@@ -1,0 +1,13 @@
+<?php
+App::uses('AppController', 'Controller');
+
+class TestController extends AppController {
+
+    public function index() {
+    	$this->autoRrender = false;
+        //$this->redirect("http://localhost/view/Test/DBtest.php");
+	echo "hello!";
+
+    }
+ 
+}

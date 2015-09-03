@@ -1,0 +1,35 @@
+<?php
+App::uses('AppController', 'Controller');
+App::uses('Sanitize', 'Utility');
+
+class UserInfosController extends AppController {
+	    // コントローラー名
+    public $name = 'UserInfo';
+    // モデルを指定しない
+    public $uses = array('UserInfo','user_infos');
+
+    public $request;
+
+	public function top() {
+		$this->autoLayout = false;
+
+	}
+	public function show($id = 0){
+		//set('送信する変数名',$this->Model名->find('条件'));
+		if ($this->request->is('post')) {
+		$this->autoLayout = false;
+		$data = $this->UserInfo->find('all');
+        $this->set('data', $data);
+    }
+	}
+	public function verify(){
+	    if($this->request->is('post')) {
+      if(false){
+        return $this->redirect('show');
+    } else{
+        printf('ログイン失敗');
+    }
+}
+}
+}
+?>
