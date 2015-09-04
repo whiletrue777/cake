@@ -18,6 +18,7 @@
 			'name'=>'DName'));
 		echo $this->Form->end("入力されたIDを削除");
 		?>
+<h1>TEST</h1>
 <br>
 <br>
 <?php 
